@@ -1,0 +1,290 @@
+@media only screen and (max-width: 600px) {
+  .mainDiv {
+    box-sizing: border-box;
+    margin-top: 20px;
+  }
+  .mainSlider{
+    height: 400px;
+    width: 95%;
+    margin: 20px auto;
+    border-radius: 2;
+    background-color: black;
+  }
+  .mainSlider > img{
+    height: 100%;
+    width: 100%;
+  }
+  .mainSlide{
+    position: relative;
+    height: 400px;
+    width: 95%;
+    margin: 20px auto;
+    background-color: black;
+  }
+  .mainSlide > div > img{
+    height: 300px;
+    width: 300px;
+  }
+  
+   .mainSlide1{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 0;
+    top: 0;
+    animation-name: fading1;
+    animation-duration: 18s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes fading1 {
+    0%{opacity: 1;}
+    30%{opacity: 1;}
+    35%{ opacity: 0;}
+    65%{ opacity: 0;}
+    100%{ opacity: 0;}
+  }
+  .mainSlide2{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 0;
+    top: 0;
+    animation-name: fading2;
+    animation-duration: 18s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes fading2 {
+    0%{opacity: 0;}
+    30%{opacity: 0;}
+    35%{ opacity: 1;}
+    65%{ opacity: 1;}
+    70%{ opacity: 0;}
+    100%{ opacity: 0;}
+  }
+  .mainSlide3{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 0;
+    top: 0;
+    animation-name: fading3;
+    animation-duration: 18s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes fading3 {
+    0%{opacity: 0;}
+    65%{opacity: 0;}
+    70%{ opacity: 1;}
+    /* 98%{ opacity: 1;}
+    100%{ opacity: 0;} */
+   }  
+  
+}
+
+
+
+@media only screen and (min-width: 600px) {
+  .mainDiv {
+    box-sizing: border-box;
+    margin-top: 80px;
+  }
+  .headMain{
+    font-size: 50px;
+    letter-spacing: 3px;
+  }
+  .mainSlider > img{
+    height: 300px;
+    width: 300px;
+  }
+  .mainSlide, .mainSlider{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 20px auto;
+    background-color: black;
+  }
+  .mainSlide > div > img{
+    height: 300px;
+    width: 300px;
+  }
+  
+   .mainSlide1{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 0;
+    top: 0;
+    animation-name: fading1;
+    animation-duration: 18s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes fading1 {
+    0%{opacity: 1;}
+    30%{opacity: 1;}
+    35%{ opacity: 0;}
+    65%{ opacity: 0;}
+    100%{ opacity: 0;}
+  }
+  .mainSlide2{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 0;
+    top: 0;
+    animation-name: fading2;
+    animation-duration: 18s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes fading2 {
+    0%{opacity: 0;}
+    30%{opacity: 0;}
+    35%{ opacity: 1;}
+    65%{ opacity: 1;}
+    70%{ opacity: 0;}
+    100%{ opacity: 0;}
+  }
+  .mainSlide3{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 0;
+    top: 0;
+    animation-name: fading3;
+    animation-duration: 18s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes fading3 {
+    0%{opacity: 0;}
+    65%{opacity: 0;}
+    70%{ opacity: 1;}
+    /* 98%{ opacity: 1;}
+    100%{ opacity: 0;} */
+   }  
+  
+}
+
+
+.mainCarousel{
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type:x mandatory;
+}
+.mainCarousel > div{
+    display: flex;
+    flex-shrink: 0;
+    width: 100%;
+    height:300px;
+    scroll-snap-align: start;
+    scroll-behavior: smooth;
+    background-color: blue;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainAnimation1 {
+  width: 100px;
+  height: 20px;
+  border: 2px dotted white;
+  border-radius: 4px;
+  position: relative;
+  text-align: center;
+  padding-top: 5px;
+  font-size: small;
+  animation-name: slide1;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+@keyframes slide1 {
+  from { left: 0; }
+  to { left: 60%; }
+  20% { background-color: rgb(0, 37, 202); }
+  50% {
+    background-color: black;
+    color: white; }
+  80% { background-color: rgb(0, 37, 202); }
+}
+
+
+.mainAnimation2 {
+  width: 100px;
+  height: 20px;
+  border: 2px dotted red;
+  border-radius: 4px;
+  position: relative;
+  text-align: center;
+  padding-top: 5px;
+  font-size: small;
+  margin: 5px 0;
+  animation-name: slide2;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes slide2 {
+  from { left: 0; }
+  to { left: 60%; }
+  20% { background-color: rgb(4, 41, 4); }
+  50% {
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    color: black; }
+  80% { background-color: rgb(4, 41, 4); }
+}
+
+.mainAnimation3 {
+  width: 100px;
+  height: 20px;
+  border: 2px dotted green;
+  border-radius: 4px;
+  position: relative;
+  text-align: center;
+  padding-top: 5px;
+  font-size: small;
+  position: relative;
+  /* left: 0; */
+  animation-name: slide3;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+@keyframes slide3 {
+  from {left: 0;}
+  to {left: 60%;}
+  20% { background-color: rgb(105, 0, 0); }
+  50% {
+    background-color: black;
+    color: white; }
+  80% { background-color: rgb(105, 0, 0); }
+}
+
+.mainGrid {
+  background-color: white;
+  color: hsla(0, 0%, 0%, 0.8);
+  padding: 30px 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+.mainImg {
+  height: 200px;
+  border-radius: 5px;
+}
+.mainDiv1 {
+  background-image: url(../assets/images/highway.jpg);
+  background-size: cover;
+  opacity: 0.7;
+  margin: 20px;
+  line-height: 2;
+  letter-spacing: 2px;
+  text-decoration: underline;
+  /* opacity:0.7; */
+  /* font-variant:small-caps; */
+}
+.mainDiv2 {
+  background-image: url(../assets/images/splash14.jpg);
+  background-size: cover;
+  opacity: 0.7;
+  line-height: 2;
+  letter-spacing: 3px;
+  text-decoration: underline;
+}
